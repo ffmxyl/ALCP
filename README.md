@@ -19,5 +19,5 @@ python setup.py install
 export RUN_SCHEDULER=1
 export RUN_CHECKPOINT=1
 export CHK_WAY=0
-horovodrun -np 3 -H 10.0.0.1:1,10.0.0.3:1,10.0.0.5:1 -p 12262 python dali_bench.py --noeval -j 8 -b 128 -a resnet18 --dali --epochs 2
+horovodrun -np 3 -H ip1:1,ip2:1,ip3:1 -p 12262 python dali_bench.py --noeval -j 8 -b 128 -a resnet18 --dali --epochs 2
 ```
